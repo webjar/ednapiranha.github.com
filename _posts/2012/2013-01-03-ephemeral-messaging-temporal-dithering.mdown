@@ -27,7 +27,7 @@ Sometimes it is used for those situations but other times it could just be short
 
 Let's say Alice sends Bob an ephemeral message - Bob receives the message and gets a countdown of 10 seconds to view it before it self destructs. If Bob wanted to, he could take a screenshot of the message before it times out and create a copy of it, therefore rendering the temporality of the message useless.
 
-That's where we bring in the concept of temporal dithering - there was a recent [article](http://blog.persistent.info/2012/12/screenshot-proof-images-via-temporal.html) about this topic which peaked my interest. The idea is that Bob would be able to see the message but a screenshot would give him only part of the data - not enough to give any real context.
+That's where we bring in the concept of temporal dithering - there was a recent [article](http://blog.persistent.info/2012/12/screenshot-proof-images-via-temporal.html) about this topic which piqued my interest. The idea is that Bob would be able to see the message but a screenshot would give him only part of the data - not enough to give any real context.
 
 I decided to experiment with this in [Canvas](http://en.wikipedia.org/wiki/Canvas_element) in a way that handles arbitrary text messages. I've only hacked on the concept the past two days so this is still in its infancy, but you can check out [the demo](http://ednapiranha.com/dithering/). The code is actually pretty minimal and doesn't do anything too fancy but it works in most cases.
 

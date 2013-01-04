@@ -1,0 +1,54 @@
+---
+title: "Ephemeral Messaging and Temporal Dithering Experiments"
+layout: default
+categories: software, javascript, development, canvas, HTML5
+summary: "Over the holidays I became interested in the idea of ephemeral messaging and temporal dithering"
+---
+
+## A Different Way of Looking at Chat
+
+Over the holidays I became interested in the topic of ephemeral messaging and temporal dithering as an everyday use case in the web.
+
+Normally, we expect to chat to others (either one-to-one or one-to-many) and have the data persist through databases or logs for an unknown period of time.
+
+In terms of privacy, this is a problem for people that don't feel comfortable having their data read, sold or manipulated by third parties. For others, this is not an issue because they don't really care what they say or put online.
+
+For those who do care, ephemeral messaging is an interesting alternative, since you can send a message to someone, it sits in a database until the user reads it and then it is "destroyed".
+
+How this message is destroyed is up to the service implementing it but for our purposes, we will assume full deletion - not a delete flag but a complete removal.
+
+## Why would anyone want to remove messages?
+
+There are many reasons why people might not want messages to stick around for too long - and not all those reasons have to do with writing nefarious and/or scandalous text.
+
+Sometimes it is used for those situations but other times it could just be short conversations, gossip or whatever humans like to communicate to each other about when socializing online. In some of these scenarios, the comfort of knowing the message is not persisting somewhere is enough of a motivation to support ephemeral messaging.
+
+## Messages can't be trusted
+
+Let's say Alice sends Bob an ephemeral message - Bob receives the message and gets a countdown of 10 seconds to view it before it self destructs. If Bob wanted to, he could take a screenshot of the message before it times out and create a copy of it, therefore rendering the temporality of the message useless.
+
+That's where we bring in the concept of temporal dithering - there was a recent [article](http://blog.persistent.info/2012/12/screenshot-proof-images-via-temporal.html) about this topic which peaked my interest. The idea is that Bob would be able to see the message but a screenshot would give him only part of the data - not enough to give any real context.
+
+I decided to experiment with this in [Canvas](http://en.wikipedia.org/wiki/Canvas_element) in a way that handles arbitrary text messages. I've only hacked on the concept the past two days so this is still in its infancy, but you can check out [the demo](http://ednapiranha.com/dithering/). The code is actually pretty minimal and doesn't do anything too fancy but it works in most cases.
+
+Here are three random screenshot attempts while it flickers for a maximum of 20 seconds:
+
+![Dithering Screen 1](https://dl.dropbox.com/u/1913694/blog/dither1.jpg)
+
+![Dithering Screen 2](https://dl.dropbox.com/u/1913694/blog/dither2.jpg)
+
+![Dithering Screen 3](https://dl.dropbox.com/u/1913694/blog/dither3.jpg)
+
+As you can see, they aren't that readable but in the first screenshot if you knew what was actually written, you might be able to discern what that says.
+
+## Setting a TTL
+
+Well now that we have a noisy text message that is difficult to take a screenshot of, what else can we do? Well, we can apply a TTL (time to live) on the message so that once it is sent by Alice and Bob gets a notification to view it, the action of viewing causes the message to countdown and destroy itself.
+
+In thise case, I use [Redis](http://redis.io) to store the messages temporarily and then wipe them once they are accessed.
+
+## The Code
+
+I am currently working on an ephemeral messaging service called [DetourApp](https://detourapp.com) and plan to incorporate some variant of the temporal dithering technique in the next few days.
+
+If you want to see the code for the dithering demo, [check it out on Github](https://github.com/ednapiranha/dithering).

@@ -6,6 +6,13 @@
     <link>http://ednapiranha.com</link>
     
       <item>
+        <title>DetourApp</title>
+        <description>Over the holidays I became interested in the idea of ephemeral messaging and temporal dithering</description>
+        <published>2013-01-23 00:00:00 -0500</published>
+        <link>http://ednapiranha.com/2013/detourapp/</link>
+      </item>
+    
+      <item>
         <title>Ephemeral Messaging and Temporal Dithering Experiments</title>
         <description>Over the holidays I became interested in the idea of ephemeral messaging and temporal dithering</description>
         <published>2013-01-03 00:00:00 -0500</published>
@@ -17,13 +24,6 @@
         <description>So I made a playlist sharing thingy!</description>
         <published>2012-12-09 00:00:00 -0500</published>
         <link>http://ednapiranha.com/2012/moxboxx/</link>
-      </item>
-    
-      <item>
-        <title>NoodleApp</title>
-        <description>I am still on Twitter, I am just choosing to ignore it for as long as I can these days.</description>
-        <published>2012-10-28 00:00:00 -0400</published>
-        <link>http://ednapiranha.com/2012/noodleapp/</link>
       </item>
     
   </channel>

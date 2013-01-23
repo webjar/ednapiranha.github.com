@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>edna piranha</title>
+    <meta content="width=device-width, height=device-height, user-scalable=no, initial-scale=0.95, maximum-scale=0.95, minimum-scale=0.95" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="chrome=1" http-equiv="X-UA-Compatible">
+    <link type="text/css" rel="stylesheet" href="/main.css">
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-4319539-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <a href="/" id="home" class="top-link">Home</a>
+      <a href="/about.html" id="about" class="top-link">About</a>
+
+<div class="content">
+  <div class="page-header">
+    
+      <h3 class="title">DetourApp</h3>
+    
+  </div>
+  <div class="post-content">
+    <h2 id='detourapp_is_mostly_stable'>DetourApp is mostly stable!</h2>
+
+<p>I am happy to announce that DetourApp is in working condition!</p>
+
+<h2 id='what_it_is'>What it is</h2>
+
+<p>DetourApp is an ephemeral messaging app (similar to Snapchat and Facebook Poke). Messages are sent to recipients and once viewed they self-destruct after 10 seconds.</p>
+
+<p>One addition to DetourApp is dithering of photos using Canvas, which makes it diffcult to save a clear screenshot. In this post, I&#8217;ll be sharing the failures and successes of implementing this feature for multiple browsers.</p>
+
+<h2 id='how_it_works'>How it works</h2>
+
+<ol>
+<li>Add a contact by their email address</li>
+
+<li>Create a new message and select your contact</li>
+
+<li>Add a photo (optional) and either leave it as is or set dithering</li>
+
+<li>Send!</li>
+</ol>
+
+<p>Assuming the contact has already signed in and set email notifications on or have signed up for <a href='https://pushover.net'>https://pushover.net</a> and allowed push notifications on their Android or iOS device, they will receive a ping about the message.</p>
+
+<p>For those who are not familiar with Pushover, it is a service for applications that do not have access to native push notifications. They send the notifications for you through their client.</p>
+
+<p>The dithering is only enough to make details difficult to see during a possible screenshot but not enough to make it complete noise (as in the text dithering demo from my <a href='/2013/ephemeral-messaging-temporal-dithering/'>previous post</a>).</p>
+
+<p>No dithering</p>
+
+<p><img alt='Message with no dithering' src='http://dl.dropbox.com/u/1913694/blog/detourapp1.jpg' /></p>
+
+<p>With dithering</p>
+
+<p><img alt='Message with dithering' src='http://dl.dropbox.com/u/1913694/blog/detourapp2.jpg' /></p>
+
+<h2 id='the_failed_generation_of_previews_with_dithering'>The failed generation of previews with dithering</h2>
+
+<p>Originally, I had used <a href='https://developer.mozilla.org/en-US/docs/DOM/FileReader'>FileReader()</a> to output the base64 image source to Canvas, but that didn&#8217;t work so well in mobile browsers.</p>
+
+<p>On Firefox and Chrome in Android this generally works with no problems - the best configuration is to set the jpg quality to low and to a maximum of 1 MB.</p>
+
+<p>On iOS Safari, I ran into a few problems. Since it has limited memory, generating the image on Canvas caused subsampling errors since you can&#8217;t control the photo quality from the camera so it would send large base64 strings and warp the height of the image, even though the height is specified in Canvas. I ended up finding <a href='http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/CreatingContentforSafarioniPhone/CreatingContentforSafarioniPhone.html'>this article</a> from Apple about the iOS resource limitations.</p>
+
+<p>The experience on iOS Safari made DetourApp unusable and only worked on Android if camera settings were changed. So I ended up removing previewing support in Canvas and changed it to output the the preview only in an image source tag and using a regular file upload.</p>
+
+<h2 id='the_failed_file_upload_in_ios_safari'>The failed file upload in iOS Safari</h2>
+
+<p>Using <a href='https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/FormData'>FormData()</a>, I changed the code such that once a file is uploaded to the server, ImageMagick resizes the image and sends back a new base64 string of the optimized version.</p>
+
+<p>This worked great on Firefox and Chrome in Android and appeared to work in iOS Safari &#8230; THE FIRST TIME. Subsequent times this failed - the ajax request would not even submit. Turns out after some investigation, <a href='http://stackoverflow.com/questions/12506897/is-safari-on-ios-6-caching-ajax-results'>iOS 6 Safari caches POST requests</a> which can break this.</p>
+
+<p>I fixed that by doing gross things to the POST url - finally Safari started behaving. By gross, I mean sending a timestamp string appended to the url - it was either that or set no-cache headers on the server side. I chose the former.</p>
+
+<h2 id='send_some_messages'>Send some messages!</h2>
+
+<p>Check it out at <a href='https://detourapp.com'>https://detourapp.com</a></p>
+
+<p>I would suggest that if you do test this, the following work the best (currently):</p>
+
+<ul>
+<li>Desktop Firefox|Chrome|Safari</li>
+
+<li>Android Firefox</li>
+
+<li>iOS Safari</li>
+</ul>
+
+<p>Chrome on Android seems to do weird things to an ajax request that I make to display contacts (seems to only show partial data and not all but it is functioning) so I have no idea what that is about.</p>
+
+<h2 id='if_you_want_to_check_out_the_code_'>If you want to check out the code &#8230;</h2>
+
+<p>Feel free to browse the repository on <a href='https://github.com/ednapiranha/detour'>Github</a></p>
+  </div>
+  <p class="date">January 23, 2013</p>
+</div>
+
+<div class="categories">
+  
+    <span>software,</span>
+  
+    <span>javascript,</span>
+  
+    <span>development,</span>
+  
+    <span>canvas,</span>
+  
+    <span>HTML5</span>
+  
+</div>
+
+    </div>
+    <div class="footer">
+      <div class="footer-wrapper">
+        <ul>
+          <li><h2>Projects</h2></li>
+          <li><a href="https://detourapp.com">DetourApp</a></li>
+          <li><a href="http://lexicrypt.com">Lexicrypt</a></li>
+          <li><a href="http://moxboxx.com">Moxboxx</a></li>
+          <li><a href="http://noodleapp.net">NoodleApp (app.net client)</a></li>
+          <li><a href="http://noodletalk.org">Noodle Talk</a></li>
+          <li><a href="http://greatbrain.heroku.com">The Great Brain</a></li>
+          <li><a href="#"><strike>The Non Sequitur</strike></a></li>
+          <li><a href="#"><strike>Paperweb</strike></a></li>
+        </ul>
+        <ul>
+          <li><h2>Code</h2></li>
+          <li><a href="https://github.com/nooodle/noodlemix">NoodleMix</a></li>
+          <li><a href="https://github.com/nooodle/noodlerpg">NoodleRPG</a></li>
+          <li><a href="https://github.com/ednapiranha/specim.in">Specim.in</a></li>
+          <li><a href="https://github.com/ednapiranha/herbie">Herbie</a></li>
+          <li><a href="https://github.com/nooodle/noodletalk">Noodle Talk</a></li>
+          <li><a href="https://github.com/ednapiranha/web_imagery">Web Imagery</a></li>
+          <li><a href="https://github.com/ednapiranha/auto-tagify">Auto Tagify</a></li>
+          <li><a href="https://github.com/ednapiranha/tapechat">Tapechat</a></li>
+        </ul>
+        <ul>
+          <li><h2>Other</h2></li>
+          <li><a href="http://alpha.app.net/ednapiranha">App.net</a></li>
+          <li><a href="http://pinboard.in/u:ednapiranha">Pinboard</a></li>
+          <li><a href="http://twitter.com/ednapiranha">Twitter</a></li>
+          <li><a href="http://www.mixcloud.com/lazykiki">Podcasts</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+

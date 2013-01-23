@@ -1,0 +1,71 @@
+---
+title: "DetourApp"
+layout: default
+categories: software, javascript, development, canvas, HTML5
+summary: "Over the holidays I became interested in the idea of ephemeral messaging and temporal dithering"
+---
+
+## DetourApp is mostly stable!
+
+I am happy to announce that DetourApp is in working condition!
+
+## What it is
+
+DetourApp is an ephemeral messaging app (similar to Snapchat and Facebook Poke). Messages are sent to recipients and once viewed they self-destruct after 10 seconds.
+
+One addition to DetourApp is dithering of photos using Canvas, which makes it diffcult to save a clear screenshot. In this post, I'll be sharing the failures and successes of implementing this feature for multiple browsers.
+
+## How it works
+
+1. Add a contact by their email address
+2. Create a new message and select your contact
+3. Add a photo (optional) and either leave it as is or set dithering
+4. Send!
+
+Assuming the contact has already signed in and set email notifications on or have signed up for [https://pushover.net](https://pushover.net) and allowed push notifications on their Android or iOS device, they will receive a ping about the message.
+
+For those who are not familiar with Pushover, it is a service for applications that do not have access to native push notifications. They send the notifications for you through their client.
+
+The dithering is only enough to make details difficult to see during a possible screenshot but not enough to make it complete noise (as in the text dithering demo from my [previous post](/2013/ephemeral-messaging-temporal-dithering/)).
+
+No dithering
+
+![Message with no dithering](http://dl.dropbox.com/u/1913694/blog/detourapp1.jpg)
+
+With dithering
+
+![Message with dithering](http://dl.dropbox.com/u/1913694/blog/detourapp2.jpg)
+
+## The failed generation of previews with dithering
+
+Originally, I had used [FileReader()](https://developer.mozilla.org/en-US/docs/DOM/FileReader) to output the base64 image source to Canvas, but that didn't work so well in mobile browsers.
+
+On Firefox and Chrome in Android this generally works with no problems - the best configuration is to set the jpg quality to low and to a maximum of 1 MB.
+
+On iOS Safari, I ran into a few problems. Since it has limited memory, generating the image on Canvas caused subsampling errors since you can't control the photo quality from the camera so it would send large base64 strings and warp the height of the image, even though the height is specified in Canvas. I ended up finding [this article](http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/CreatingContentforSafarioniPhone/CreatingContentforSafarioniPhone.html) from Apple about the iOS resource limitations.
+
+The experience on iOS Safari made DetourApp unusable and only worked on Android if camera settings were changed. So I ended up removing previewing support in Canvas and changed it to output the the preview only in an image source tag and using a regular file upload.
+
+## The failed file upload in iOS Safari
+
+Using [FormData()](https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/FormData), I changed the code such that once a file is uploaded to the server, ImageMagick resizes the image and sends back a new base64 string of the optimized version.
+
+This worked great on Firefox and Chrome in Android and appeared to work in iOS Safari ... THE FIRST TIME. Subsequent times this failed - the ajax request would not even submit. Turns out after some investigation, [iOS 6 Safari caches POST requests](http://stackoverflow.com/questions/12506897/is-safari-on-ios-6-caching-ajax-results) which can break this.
+
+I fixed that by doing gross things to the POST url - finally Safari started behaving. By gross, I mean sending a timestamp string appended to the url - it was either that or set no-cache headers on the server side. I chose the former.
+
+## Send some messages!
+
+Check it out at [https://detourapp.com](https://detourapp.com)
+
+I would suggest that if you do test this, the following work the best (currently):
+
+* Desktop Firefox|Chrome|Safari
+* Android Firefox
+* iOS Safari
+
+Chrome on Android seems to do weird things to an ajax request that I make to display contacts (seems to only show partial data and not all but it is functioning) so I have no idea what that is about.
+
+## If you want to check out the code ...
+
+Feel free to browse the repository on [Github](https://github.com/ednapiranha/detour)

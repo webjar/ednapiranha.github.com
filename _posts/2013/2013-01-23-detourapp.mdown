@@ -2,7 +2,7 @@
 title: "DetourApp"
 layout: default
 categories: software, javascript, development, canvas, HTML5
-summary: "Over the holidays I became interested in the idea of ephemeral messaging and temporal dithering"
+summary: "I am happy to announce that DetourApp is in working condition!"
 ---
 
 ## DetourApp is mostly stable!

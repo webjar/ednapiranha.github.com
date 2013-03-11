@@ -6,8 +6,15 @@
     <link>http://ednapiranha.com</link>
     
       <item>
+        <title>NoodleConf 2013</title>
+        <description>Noodle Industries is not just a bunch of code, it's a philosophy of life.</description>
+        <published>2013-03-11 00:00:00 -0400</published>
+        <link>http://ednapiranha.com/2013/noodleconf/</link>
+      </item>
+    
+      <item>
         <title>DetourApp</title>
-        <description>Over the holidays I became interested in the idea of ephemeral messaging and temporal dithering</description>
+        <description>I am happy to announce that DetourApp is in working condition!</description>
         <published>2013-01-23 00:00:00 -0500</published>
         <link>http://ednapiranha.com/2013/detourapp/</link>
       </item>
@@ -17,13 +24,6 @@
         <description>Over the holidays I became interested in the idea of ephemeral messaging and temporal dithering</description>
         <published>2013-01-03 00:00:00 -0500</published>
         <link>http://ednapiranha.com/2013/ephemeral-messaging-temporal-dithering/</link>
-      </item>
-    
-      <item>
-        <title>Moxboxx</title>
-        <description>So I made a playlist sharing thingy!</description>
-        <published>2012-12-09 00:00:00 -0500</published>
-        <link>http://ednapiranha.com/2012/moxboxx/</link>
       </item>
     
   </channel>

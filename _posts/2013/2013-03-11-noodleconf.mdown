@@ -1,0 +1,51 @@
+---
+title: "NoodleConf 2013"
+layout: default
+categories: software, javascript, podcasts, conference
+summary: "Noodle Industries is not just a bunch of code, it's a philosophy of life."
+---
+
+![noodle industries blue](https://dl.dropbox.com/u/1913694/blog/noodleconf1.png)
+
+## It Started With a Fake Brand ...
+
+Noodle Industries is not just a bunch of code, it's a philosophy of life.
+
+## Who Needs VC Funding When You've Got Friends and Contributors?
+
+If you love to code and love to learn and share, then you should make things for fun! Stop thinking about the money aspect all the time!
+
+## Everyone Loves Noodle ...
+
+Everyone loves to be a part of a community and experiment on projects. Well, most people. Hopefully.
+
+![noodle industries lime](https://dl.dropbox.com/u/1913694/blog/noodleconf2.png)
+
+## Assuming We Love Coding and Experimenting and Hacking ...
+
+Why not get a group together to talk about our projects? Why not share this with the world in an affordable and clever manner? Why not build the software to make this happen?
+
+## Everyone Welcome NoodleConf 2013!
+
+This conference is not like a traditional conference. This conference has some key differences:
+
+* There are no keynotes
+* Speakers will be in a panel, where multiple speakers will interact and share their projects and related topics
+* The audience will participate by watching the WebRTC feed from the comfort of their own home or whatever location they choose (as long as it has an internet connection)
+* The audience and speakers will interact all day through IRC
+
+![noodle industries pink](https://dl.dropbox.com/u/1913694/blog/noodleconf3.png)
+
+## When Is It Happening? How Much Is It?
+
+The [conference software is currently under development](https://github.com/nooodle/noodleconfware) and the [information site](http://nooodle.github.com/noodleconf) will have a pre-registration form in the next few days.
+
+Ticket prices will be very very affordable (as in Starbucks-level affordable), so don't worry about the cost. We will let you know as soon as we have the costs figured out.
+
+The conference will happen sometime in the late spring / early summer on a Saturday. Date also not confirmed (yet).
+
+## Want To Keep Up To Date With NoodleConf Updates?
+
+[Follow the Twitter account](http://twitter.com/noodleconf)
+
+![noodle industries black](https://dl.dropbox.com/u/1913694/blog/noodleconf4.png)

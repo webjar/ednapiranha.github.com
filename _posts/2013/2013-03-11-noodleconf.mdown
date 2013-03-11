@@ -42,7 +42,7 @@ The [conference software is currently under development](https://github.com/nooo
 
 Unfortunately, ticket prices will not be NaN dollars.
 
-Ticket prices will be very, very affordable (as in Starbucks-level affordable), so don't worry about the cost. We will let you know as soon as we have the cost figured out.
+Ticket prices will be very, very affordable (as in Starbucks-level affordable), so don't worry about the cost. We will let you know as soon as we have the details figured out.
 
 The conference will happen sometime in the late spring / early summer on a Saturday. Date also not confirmed (yet).
 

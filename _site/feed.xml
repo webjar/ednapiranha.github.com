@@ -6,6 +6,13 @@
     <link>http://ednapiranha.com</link>
     
       <item>
+        <title>Trakker</title>
+        <description>I'm a big electronic music listener. The problem with a lot of the music I listen to is that they are usually mixes and mostly podcasts.</description>
+        <published>2013-04-25 00:00:00 -0400</published>
+        <link>http://ednapiranha.com/2013/trakker/</link>
+      </item>
+    
+      <item>
         <title>NoodleConf 2013</title>
         <description>Noodle Industries is not just a bunch of code, it's a philosophy of life.</description>
         <published>2013-03-11 00:00:00 -0400</published>
@@ -17,13 +24,6 @@
         <description>I am happy to announce that DetourApp is in working condition!</description>
         <published>2013-01-23 00:00:00 -0500</published>
         <link>http://ednapiranha.com/2013/detourapp/</link>
-      </item>
-    
-      <item>
-        <title>Ephemeral Messaging and Temporal Dithering Experiments</title>
-        <description>Over the holidays I became interested in the idea of ephemeral messaging and temporal dithering</description>
-        <published>2013-01-03 00:00:00 -0500</published>
-        <link>http://ednapiranha.com/2013/ephemeral-messaging-temporal-dithering/</link>
       </item>
     
   </channel>

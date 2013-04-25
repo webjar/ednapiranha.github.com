@@ -1,0 +1,32 @@
+---
+title: "Trakker"
+layout: default
+categories: software, javascript, tracklists
+summary: "I'm a big electronic music listener. The problem with a lot of the music I listen to is that they are usually mixes and mostly podcasts."
+---
+
+## Tracklists need a home
+
+I'm a big electronic music listener. The problem with a lot of the music I listen to is that they are usually mixes and mostly podcasts.
+
+Sometimes they are released with a tracklist and sometimes I have to spend a lot of time going through search engines and hope that someone posted their attempt at figuring out the tracklist on an old PHPBB forum made before the war of 1812.
+
+This can get tedious, since I never remember to bookmark the page and then I end up looking it up again a few months later.
+
+## Trakker
+
+So I started out by making [trakker](https://npmjs.org/package/trakker) as a quick way to convert these tracklists that I find all over the internet into something comprehensible to process information with.
+
+Then I thought "wait, I don't really want to keep revisiting these forums over and over and I hate how they look and I want to be able to search for keywords on my terms". So I built an app just to do that.
+
+## Trakkerapp
+
+As a result I created [trakkerapp](http://trakkerapp.net), which is more or less a web interface for trakker. And some extras. Like search. And profiles. And editing.
+
+All it consists of is a database of tracklists and their tracks, an optional download link for the mix, and possibly custom keywords or links per track in case I need to search for it later. Sometimes I tag something with a keyword that references a movie sample that they use or sometimes I paste in a youtube link for the video. It all depends.
+
+Now whenever I want to reference a track to someone I can search for it on here and figure out which mix / podcast it was on. Going through 10+ dBridge mixes to find one track is pretty annoying without a system like this.
+
+## You like tracklists too?
+
+If you are interested in trying it out for your tracklists, feel free to sign up and add your own too! Note that this is still under heavy development and I'm pretty sure there are weird bugs all over the place. Feel free to [file an issue](https://github.com/ednapiranha/trakkerapp/issues) if you do encounter any.

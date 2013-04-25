@@ -1,5 +1,5 @@
 ---
-title: "Trakker"
+title: "Trakker the Tracklist database"
 layout: default
 categories: software, javascript, tracklists
 summary: "I'm a big electronic music listener. The problem with a lot of the music I listen to is that they are usually mixes and mostly podcasts."
@@ -17,7 +17,7 @@ This can get tedious, since I never remember to bookmark the page and then I end
 
 So I started out by making [trakker](https://npmjs.org/package/trakker) as a quick way to convert these tracklists that I find all over the internet into something comprehensible to process information with.
 
-Then I thought "wait, I don't really want to keep revisiting these forums over and over and I hate how they look and I want to be able to search for keywords on my terms". So I built an app just to do that.
+Then I thought "wait, I don't really want to keep revisiting these forums over and over and I hate how they look and I want to be able to search for keywords on my terms".
 
 ## Trakkerapp
 

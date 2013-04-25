@@ -1,5 +1,5 @@
 ---
-title: "Trakker the Tracklist database"
+title: "Trakker"
 layout: default
 categories: software, javascript, tracklists
 summary: "I'm a big electronic music listener. The problem with a lot of the music I listen to is that they are usually mixes and mostly podcasts."
@@ -12,8 +12,6 @@ I'm a big electronic music listener. The problem with a lot of the music I liste
 Sometimes they are released with a tracklist and sometimes I have to spend a lot of time going through search engines and hope that someone posted their attempt at figuring out the tracklist on an old PHPBB forum made before the war of 1812.
 
 This can get tedious, since I never remember to bookmark the page and then I end up looking it up again a few months later.
-
-## Trakker
 
 So I started out by making [trakker](https://npmjs.org/package/trakker) as a quick way to convert these tracklists that I find all over the internet into something comprehensible to process information with.
 

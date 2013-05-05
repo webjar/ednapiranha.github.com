@@ -143,8 +143,13 @@ h2 {
 }
 
 .post-content ul, .post-content ol {
+    font-size: 1.1em;
     list-style-type: circle;
     margin-left: 20px;
+}
+
+.post-content ul li, .post-content ul ol {
+    margin-bottom: 3px;
 }
 
 .post-content a:hover {

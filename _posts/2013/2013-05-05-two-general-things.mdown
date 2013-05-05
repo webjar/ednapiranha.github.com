@@ -1,0 +1,41 @@
+---
+title: "Two General Things"
+layout: default
+categories: software, javascript
+summary: "I've been coding a lot and didn't realize how much."
+---
+
+## Brain Rampage
+
+I've been coding a lot and didn't realize how much. I kinda accidentally came up with two new projects in the past week or so.
+
+## General Store
+
+This was some sort of attempt to make an el cheapo 2D adventure game engine, which more or less became an interactive fiction engine. My friend [Laura](https://twitter.com/lauradegroot) decided to try out my crazy experimental fiction maker during its 0.0.1 pre-alpha state.
+
+This was last Friday - then I was asked to speak about it at Mozilla web dev's monthly [Beer and Tell](https://blog.mozilla.org/webdev/2013/04/30/mozilla-webdev-beer-and-tell-april-26-2013/). But the clock said 10 a.m. and we needed to have this ready by 5 p.m. By ready, I mean something to demo. So I decided to make a demo game too.
+
+Fast forward to 5 p.m.-ish. Laura and I came up with the following demos:
+
+* [Let's Make Tea](http://lauradegroot.github.io/lets-make-tea/main.html)
+* [Blotter World](https://dl.dropboxusercontent.com/u/1913694/gs/blotter/index.html)
+
+If you're a bit concerned, you should be. These demo "games" make absolutely no sense and we were basically slapping Photoshops of layers together. And this - boys and girls - is what dreams (read: nightmares) are made of.
+
+I've made some major updates to [General Store](https://github.com/ednapiranha/generalstore) so that you too can easily make interactive gonzo fiction. Note the instructions on the README - you'll need to clone the production branch to make a game, not master.
+
+I actually have another game being developed with this - basically Twin Peaks in cat form - I swear it's more coherent. I'll give you updates in a few days hopefully.
+
+## General Notes
+
+Of course, this project involves Laura again. I think she brings out the [lysergic acid](http://en.wikipedia.org/wiki/Lysergic_acid) in my [pineal gland](https://en.wikipedia.org/wiki/Pineal_gland). Or something. Anyway she wanted a simple note app and I said I'd make one in two hours. It ended up taking 2.5 hours because CSS can be annoying.
+
+Then I worked on it some more and now it handles local and remote syncing of notes - IndexedDB on the client and Redis on the server. All JavaScript, all the time.
+
+You can try out this [fun little note app](http://notes.generalgoods.net) if you need yet-another-note-app - but made by my pineal gland. The [source code](https://github.com/ednapiranha/generalnotes) is also available.
+
+I'll be writing up another blog post next week about this particular project.
+
+I will leave you with a picture of a hiking road trip from yesterday
+
+![road](https://dl.dropboxusercontent.com/u/1913694/blog/road.jpg)

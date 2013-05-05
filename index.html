@@ -4,7 +4,7 @@ is_index: true
 ---
 
 {% include header.html %}
-<h2>Recent Posts</h2>
+<h2>Recent</h2>
 {% for post in paginator.posts limit:3 %}
   {% include post_preview.html %}
 {% endfor %}

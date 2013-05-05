@@ -54,7 +54,7 @@ body {
 
 .wrapper {
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 670px;
     min-width: 270px;
     padding: 40px 20px 20px 20px;
     position: relative;
@@ -69,7 +69,7 @@ p, li, a, span {
 .top-link {
     color: #666;
     display: block;
-    font-size: 0.7em;
+    font-size: 0.9em;
     padding: 3px 10px 3px 10px;
     position: absolute;
     text-transform: uppercase;
@@ -82,12 +82,12 @@ p, li, a, span {
 }
 
 #about {
-    left: 80px;
+    left: 100px;
 }
 
 h1, h2, h3, h4 {
-    color: #111;
-    font-size: 2em;
+    color: #ccc;
+    font-size: 2.2em;
     font-weight: 100;
     letter-spacing: -0.02em;
     line-height: 0.9em;
@@ -95,8 +95,9 @@ h1, h2, h3, h4 {
 }
 
 h2 {
+    color: #303337;
     display: block;
-    margin: 40px 0 20px;
+    margin: 40px 0 25px;
 }
 
 .title {
@@ -127,6 +128,11 @@ h2 {
 .title a:hover {
     background-color: #096c91;
     color: #fff;
+}
+
+.post-content p {
+    color: #666;
+    font-size: 1.1em;
 }
 
 .post-content a {
@@ -173,49 +179,58 @@ a {
     text-decoration: none;
 }
 
+.pagination {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
 .footer {
+    background-color: #bff6f5;
+    border-top: 20px solid #d2fcfb;
     clear: both;
     display: block;
     float: left;
-    margin-top: 10px;
+    margin-top: 20px;
+    padding-top: 30px;
     width: 100%;
 }
 
 .footer-wrapper {
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 670px;
     min-width: 270px;
     padding: 0px 20px 0px 20px;
 }
 
 .footer li {
-    margin: 5px 10px 5px 0px;
+    margin: 5px 0;
 }
 
 .footer ul {
     display: block;
     float: left;
-    margin: 0px;
+    margin: 0 0 30px;
+    min-width: 220px;
     width: 33.3%;
 }
 
 .footer li h2 {
     color: #111;
-    font-size: 1.4em;
-    margin: 10px 0;
+    font-size: 1.5em;
+    margin: 10px 0 20px;
     padding: 4px 5px 0 0;
     width: 100%;
 }
 
 .footer li a {
     color: #333;
-    font-size: 0.9em;
+    font-size: 1em;
     font-weight: normal;
     padding: 0px 3px 0px 3px;
 }
 
 .footer li a:hover {
-    background-color: #d5dee0;
+    background-color: #fff;
 }
 
 .categories {

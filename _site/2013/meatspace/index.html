@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>edna piranha</title>
+    <meta content="width=device-width, height=device-height, user-scalable=no, initial-scale=0.95, maximum-scale=0.95, minimum-scale=0.95" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="chrome=1" http-equiv="X-UA-Compatible">
+    <link type="text/css" rel="stylesheet" href="/main.css">
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-4319539-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <a href="/" id="home" class="top-link active">Posts</a>
+      <a href="/about.html" id="about" class="top-link">About</a>
+
+
+<div class="content">
+  <div class="page-header">
+    
+      <h3 class="title">Meatspace</h3>
+    
+  </div>
+  <div class="post-content">
+    <h2 id='decentralizing_the_microblog'>Decentralizing the microblog</h2>
+
+<p>There are five things that bother me about third-party, closed source microblogging services:</p>
+
+<ol>
+<li>You never know what they are doing with your personal data.</li>
+
+<li>They might shut down or get bought and then you have to go through this annoying archive download process.</li>
+
+<li>If it becomes too popular, then it might be the kind of audience you don&#8217;t want to be involved with.</li>
+
+<li>They change the way it works or the user interface and it causes you to possibly freak out.</li>
+
+<li>They start plastering random advertisements that aren&#8217;t even relevant to my interests (see, I&#8217;m not completely against advertisements but I really don&#8217;t need to see <em>one cool trick a mom figured out</em>).</li>
+</ol>
+
+<p>These issues are usually wrapped in a centralized service and I can only think of one thing to get around it - decentralizing the service.</p>
+
+<h2 id='other_alternatives_for_developers'>Other alternatives (for developers)</h2>
+
+<p>If you aren&#8217;t a developer and need to depend on these third-party services for easy setup and usage, then unfortunately this writeup is not for you (at the moment). <span class='large'>D:</span></p>
+
+<p>If you are a developer and love JavaScript and Node, then this <em>might</em> be for you. <span class='large'>:D</span></p>
+
+<p>You could use one of the many existing decentralized, open source apps out there - but if you&#8217;re like me, you don&#8217;t really want to set up a Ruby on Rails app <em>just</em> to post tiny random updates about where you had coffee this morning.</p>
+
+<p>As you can see, this is an even more niche post &#8230;</p>
+
+<h2 id='are_you_a_developer_that_likes_javascript_node_redis_and_microblogging_are_you_also_generally_antisocial_on_microblogs'>Are you a developer that likes JavaScript, Node, Redis and microblogging? Are you also generally antisocial on microblogs?</h2>
+
+<p>Well in that case, I may have the solution for you!</p>
+
+<h2 id='meatspace_the_decentralized_microlog'>Meatspace, the decentralized micro<code>[b]</code>log</h2>
+
+<p><img alt='Meatspace' src='https://s3.amazonaws.com/meatspace_prod/post_1368996816960.jpg' /></p>
+
+<p>You know what&#8217;s good about meat? It&#8217;s dense and squishy. You know what&#8217;s good about space? It means ample room to stretch. You know what&#8217;s good about real life face-to-face contact? It means you get to talk to people and not be a jerk online. But, I digress.</p>
+
+<p><a href='https://npmjs.org/package/meatspace'>Meatspace is a node module</a> that allows you to create, edit, delete posts and subscribe to other meatspace JSON feeds. If you subscribe to other feeds, you can also share their posts.</p>
+
+<p>You could technically run this all with curl but then people wouldn&#8217;t be able to subscribe to your feed.</p>
+
+<p>If you don&#8217;t care for people to subscribe to your feed, then go right ahead! But if you do and don&#8217;t want to set up your own homebrew node app, you can fork <a href='https://github.com/ednapiranha/generaltoast'>General Toast</a>, which is an Express app that uses the meatspace module and Persona for authentication.</p>
+
+<h2 id='general_toast'>General Toast</h2>
+
+<p>I put up my own meatspace microblog and all I do is post pictures of sunsets, my cats, coffee, weird or funny quotes and cool art. I subscribe to other meatspace urls and then passively look at it and sometimes share their posts in my feed. You can check it out at <a href='http://toast.generalgoods.net'>http://toast.generalgoods.net</a>.</p>
+
+<h2 id='still_under_development'>Still under development!</h2>
+
+<p>I <em>literally</em> made this module on my birthday last month so things could be buggy or weird or hairy. Feel free to contribute to it or fork it or make your own blog or use curl or whatever. I don&#8217;t care.</p>
+
+<p>But if you do use this or become encouraged to write your own meatspace port, then you own the data and you can do whatever you want. And that&#8217;s pretty awesome.</p>
+  </div>
+  <p class="date">June 06, 2013</p>
+</div>
+
+<div class="categories">
+  
+    <span>microblogging,</span>
+  
+    <span>node,</span>
+  
+    <span>redis,</span>
+  
+    <span>javascript</span>
+  
+</div>
+
+    </div>
+    <div class="footer">
+      <div class="footer-wrapper">
+        <ul>
+          <li><h2>Projects</h2></li>
+          <li><a href="http://notes.generalgoods.net">General Notes</a></li>
+          <li><a href="http://trakkerapp.net">TrakkerApp</a></li>
+          <li><a href="https://detourapp.com">Detour</a></li>
+          <li><a href="http://lexicrypt.com">Lexicrypt</a></li>
+          <li><a href="http://moxboxx.com">Moxboxx</a></li>
+          <li><a href="http://noodleapp.net">NoodleApp</a></li>
+          <li><a href="http://noodletalk.org">Noodle Talk</a></li>
+          <li><a href="http://greatbrain.heroku.com">The Great Brain</a></li>
+        </ul>
+        <ul>
+          <li><h2>Code</h2></li>
+          <li><a href="https://github.com/ednapiranha/node-meatspace">Meatspace</a></li>
+          <li><a href="https://github.com/ednapiranha/generalnotes">General Notes</a></li>
+          <li><a href="https://github.com/ednapiranha/generalstore">General Store</a></li>
+          <li><a href="https://github.com/ednapiranha/trakker">Trakker</a></li>
+          <li><a href="https://github.com/ednapiranha/node-webremix">Webremix</a></li>
+          <li><a href="https://github.com/nooodle/noodlerpg">NoodleRPG</a></li>
+          <li><a href="https://github.com/ednapiranha/web_imagery">Web Imagery</a></li>
+          <li><a href="https://github.com/ednapiranha/auto-tagify">Auto Tagify</a></li>
+          <li><a href="https://github.com/ednapiranha/tapechat">Tapechat</a></li>
+        </ul>
+        <ul>
+          <li><h2>Other</h2></li>
+          <li><a href="http://toast.generalgoods.net">General Toast</a></li>
+          <li><a href="http://generalgoods.net">General Goods</a></li>
+          <li><a href="http://noodleindustries.com">Noodle Industries</a></li>
+          <li><a href="http://github.com/ednapiranha">Github</a></li>
+          <li><a href="http://twitter.com/ednapiranha">Twitter</a></li>
+          <li><a href="http://ednapiranha.tumblr.com">Tumblr</a></li>
+          <li><a href="http://alpha.app.net/ednapiranha">App.net</a></li>
+          <li><a href="http://pinboard.in/u:ednapiranha">Pinboard</a></li>
+          <li><a href="http://www.mixcloud.com/lazykiki">Podcasts</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+

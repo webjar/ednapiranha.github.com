@@ -100,6 +100,16 @@ h2 {
     margin: 40px 0 25px;
 }
 
+em {
+    font-style: italic;
+    font-weight: 600;
+}
+
+span.large {
+    color: #2ec5c3;
+    font-size: 20px;
+}
+
 .title {
     margin-bottom: 10px;
     padding-bottom: 15px;

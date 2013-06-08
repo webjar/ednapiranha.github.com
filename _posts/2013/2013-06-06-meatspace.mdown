@@ -2,7 +2,7 @@
 title: "Meatspace"
 layout: default
 categories: microblogging, node, redis, javascript
-summary: "There are two things that annoy me about third-party, closed source services"
+summary: "There are two things that bother me about third-party, closed source microblogging services"
 ---
 
 ## Decentralizing the microblog

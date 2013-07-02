@@ -2,7 +2,7 @@
 title: "You Won't Know Unless You Try"
 layout: default
 categories: ideas, creativity
-summary: "Everyone has an idea. Everyone has many ideas. Most people don't know how to or find reasons to not execute their ideas."
+summary: "Everyone has at least one idea. Some people have many ideas. Most people don't know how to or find reasons to not execute their ideas."
 ---
 
 ## There are many bad ideas and a few good ones

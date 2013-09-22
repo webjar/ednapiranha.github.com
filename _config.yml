@@ -6,5 +6,5 @@ permalink: /:year/:title/
 build: _site
 url: http://ednapiranha.com
 name: Edna Piranha
-lsi: false
-pygments: true
+markdown: maruku
+markdown_ext: mdown

@@ -2,12 +2,12 @@
 title: "Updates on Life and Meat"
 layout: default
 categories: meatspace, random
-summary: "It's been a while and I have some updates!"
+summary: "It's been a while and I have some updates"
 ---
 
 ## Time Flies When You're Life is Meating.
 
-It's been a while and I have some updates!
+It's been a while and I have some updates:
 
 ![Mount Hood](https://dl.dropboxusercontent.com/u/1913694/blog/portland.jpg)
 

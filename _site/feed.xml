@@ -6,24 +6,24 @@
     <link>http://ednapiranha.com</link>
     
       <item>
+        <title>Updates on Life and Meat</title>
+        <description>It's been a while and I have some updates!</description>
+        <published>2013-09-21 00:00:00 -0700</published>
+        <link>http://ednapiranha.com/2013/updates-on-life-and-meat/</link>
+      </item>
+    
+      <item>
         <title>You Won't Know Unless You Try</title>
         <description>Everyone has at least one idea. Some people have many ideas. Most people don't know how to or find reasons to not execute their ideas.</description>
-        <published>2013-07-01 00:00:00 -0400</published>
+        <published>2013-07-01 00:00:00 -0700</published>
         <link>http://ednapiranha.com/2013/you-wont-know-unless-you-try/</link>
       </item>
     
       <item>
         <title>Meatspace</title>
         <description>There are two things that bother me about third-party, closed source microblogging services</description>
-        <published>2013-06-06 00:00:00 -0400</published>
+        <published>2013-06-06 00:00:00 -0700</published>
         <link>http://ednapiranha.com/2013/meatspace/</link>
-      </item>
-    
-      <item>
-        <title>Two General Things</title>
-        <description>I've been coding a lot and didn't realize how much.</description>
-        <published>2013-05-05 00:00:00 -0400</published>
-        <link>http://ednapiranha.com/2013/two-general-things/</link>
       </item>
     
   </channel>

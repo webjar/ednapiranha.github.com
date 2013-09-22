@@ -1,0 +1,32 @@
+---
+title: "Updates on Life and Meat"
+layout: default
+categories: meatspace, random
+summary: "It's been a while and I have some updates!"
+---
+
+## Time Flies When You're Life is Meating.
+
+It's been a while and I have some updates!
+
+![Mount Hood](https://dl.dropboxusercontent.com/u/1913694/blog/portland.jpg)
+
+* I've relocated to Portland, Oregon
+* [Meatspace](https://github.com/meatspaces) has an official Github home
+* I'll be speaking at [RealtimeConf](http://2013.realtimeconf.com) in October, so get a ticket if you already haven't!
+* I've been working on some more meatspace ...
+
+## Meatspace Experiments
+
+I've been making various small apps using [meatspace-leveldb](https://npmjs.org/package/meatspace-leveldb), [meatspace-parallax](https://npmjs.org/package/meatspace-parallax) and [meatspace-publico](https://npmjs.org/package/meatspace-publico), which are all variants of the same idea - building basic interactions in simple node modules to allow for microblogging, chatting and subscriptions.
+
+Although [meatspace](https://npmjs.org/package/meatspace) and meatspace-leveldb are the only ones that support a decentralized model of microblogging and JSON subscriptions, the other two
+(parallax and publico) support simple chat interactions without subscriptions. Parallax is a one-to-one chat design while publico is a one-to-many design.
+
+So far I've used each node module to execute its core functionality. Meatspace-leveldb for multiple microblogs, parallax and publico for realtime chat.
+
+## But What If We Combined The Two?
+
+What if we combined the archived/subscription portion of meatspace-leveldb with the realtime chat elements of parallax/publico? What if we could subscribe to both facets as a single application?
+
+This is something I am currently toying around with and it'll take a little time to figure out the right interface, experience and behaviour. Until I have something that is ready, I encourage you all to try and make your own little meatspace experiments.

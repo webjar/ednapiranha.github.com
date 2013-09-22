@@ -28,44 +28,48 @@
 <div class="content">
   <div class="page-header">
     
-      <h3 class="title">In Search of Prototyping</h3>
+      <h3 class="title">Updates on Life and Meat</h3>
     
   </div>
   <div class="post-content">
-    <p>I&#8217;ve been thinking about prototyping. And web applications. And applications that aren&#8217;t IDEs. And open web.</p>
+    <h2 id='time_flies_when_youre_life_is_meating'>Time Flies When You&#8217;re Life is Meating.</h2>
 
-<p>That&#8217;s a lot of things to think about - but there is also a lot lacking in the solutions we are currently given. For instance, let&#8217;s say I am a person who needs to build concepts quickly to test out product ideas but I may only know a little bit of code, a little bit about Photoshop and a little bit about wireframing. What are my options?</p>
+<p>It&#8217;s been a while and I have some updates!</p>
 
-<p>I could learn about programming from outputting &#8216;hello world&#8217; in some arbitrary scripting language to building an entire <a href='http://en.wikipedia.org/wiki/Create,_read,_update_and_delete'>CRUD</a> system and then take some unknown amount of time to learn someone&#8217;s proprietary IDE that hopefully increases my productivity in building apps. Does something like this make sense for me?</p>
-<img src='/images/sencha.jpg' width='100%' />
-<p>The interface is just too confusing and complicated to get anything done right away. Sure, I could read all the documentation, search around online for various tutorials and sources - but then I would just be cornering myself as a potential specialist in this proprietary software. Let&#8217;s try something else.</p>
+<p><img alt='Mount Hood' src='https://dl.dropboxusercontent.com/u/1913694/blog/portland.jpg' /></p>
 
-<p>I just want to drag and drop things - and have it generally look as expected immediately. I don&#8217;t want to read all this text about how to use it. I just want to use it. How about something like this?</p>
-<img src='/images/balsamiq.jpg' width='100%' />
-<p>Ahh, this interface is so much nicer to work with. There is one unfortunate thing - there is no actual working code in the back. This is literally a mockup - a ghost of a Photoshop file with all the common web-elements we know and love but lacking the design. This is done on purpose to keep the user from treating it as the real thing, but is this good enough? What if we could have the best of both worlds - prototype-like user execution that actually works with real code without having to write all that code or read mountains of documentation on how the system works?</p>
+<ul>
+<li>I&#8217;ve relocated to Portland, Oregon</li>
 
-<p>Let&#8217;s look at OSX&#8217;s Automator for some clues on how we can bridge the gap:</p>
-<img src='/images/automator.jpg' width='100%' />
-<p>Here we have something that you can drag and drop, is easy to understand AND actually generates some functionality.</p>
+<li><a href='https://github.com/meatspaces'>Meatspace</a> has an official Github home</li>
 
-<p>What if we could combine elements of all of these examples and make it web-based, open source and easy to use? What would it mean in terms of optimizing workflow from product to development to production?</p>
+<li>I&#8217;ll be speaking at <a href='http://2013.realtimeconf.com'>RealtimeConf</a> in October, so get a ticket if you already haven&#8217;t!</li>
 
-<p>These are the questions I want to investigate so that we can make a tool that helps people build functioning prototypes and remove the ambiguity that occurs during planning, sketching and iteration.</p>
+<li>I&#8217;ve been working on some more meatspace &#8230;</li>
+</ul>
+
+<h2 id='meatspace_experiments'>Meatspace Experiments</h2>
+
+<p>I&#8217;ve been making various small apps using <a href='https://npmjs.org/package/meatspace-leveldb'>meatspace-leveldb</a>, <a href='https://npmjs.org/package/meatspace-parallax'>meatspace-parallax</a> and <a href='https://npmjs.org/package/meatspace-publico'>meatspace-publico</a>, which are all variants of the same idea - building basic interactions in simple node modules to allow for microblogging, chatting and subscriptions.</p>
+
+<p>Although <a href='https://npmjs.org/package/meatspace'>meatspace</a> and meatspace-leveldb are the only ones that support a decentralized model of microblogging and JSON subscriptions, the other two (parallax and publico) support simple chat interactions without subscriptions. Parallax is a one-to-one chat design while publico is a one-to-many design.</p>
+
+<p>So far I&#8217;ve used each node module to execute its core functionality. Meatspace-leveldb for multiple microblogs, parallax and publico for realtime chat.</p>
+
+<h2 id='but_what_if_we_combined_the_two'>But What If We Combined The Two?</h2>
+
+<p>What if we combined the archived/subscription portion of meatspace-leveldb with the realtime chat elements of parallax/publico? What if we could subscribe to both facets as a single application?</p>
+
+<p>This is something I am currently toying around with and it&#8217;ll take a little time to figure out the right interface, experience and behaviour. Until I have something that is ready, I encourage you all to try and make your own little meatspace experiments.</p>
   </div>
-  <p class="date">May 25, 2012</p>
+  <p class="date">September 21, 2013</p>
 </div>
 
 <div class="categories">
   
-    <span>prototyping,</span>
+    <span>meatspace,</span>
   
-    <span>software,</span>
-  
-    <span>ux,</span>
-  
-    <span>javascript,</span>
-  
-    <span>development</span>
+    <span>random</span>
   
 </div>
 

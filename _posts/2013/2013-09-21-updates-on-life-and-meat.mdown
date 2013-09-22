@@ -13,7 +13,7 @@ It's been a while and I have some updates:
 
 * I've relocated to Portland, Oregon
 * [Meatspace](https://github.com/meatspaces) has an official Github home
-* I'll be speaking at [RealtimeConf](http://2013.realtimeconf.com) in October, so get a ticket if you already haven't!
+* I'll be speaking at [RealtimeConf](http://2013.realtimeconf.com) in October, so get a ticket if you haven't!
 * I've been working on some more meatspace ...
 
 ## Meatspace Experiments

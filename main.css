@@ -182,6 +182,20 @@ p {
     margin-bottom: 10px;
 }
 
+pre {
+    background-color: #eee;
+    margin-bottom: 20px;
+    overflow: scroll;
+    padding: 20px;
+}
+
+code {
+    color: #555;
+    font-family: Monaco, monospace;
+    font-size: 13px;
+    line-height: 17px;
+}
+
 ul, ol {
    margin: 0 0 30px;
 }

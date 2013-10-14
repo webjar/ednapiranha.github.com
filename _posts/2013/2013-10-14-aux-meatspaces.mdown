@@ -1,0 +1,82 @@
+---
+title: "aux.meatspac.es"
+layout: default
+categories: meatspace, youtube, vimeo
+summary: "Over the weekend and a bit, I made a quick little site using meatspace-leveldb"
+---
+
+## Using Meatspace to make Aux
+
+Over the weekend and a bit, I made a [quick little site](http://aux.meatspac.es) using [meatspace-leveldb](https://npmjs.org/package/meatspace-leveldb).
+
+This works exactly in the same way that the microblogging ones work, except I've reassigned existing meatspace properties to work for a specific context - posting video links from Youtube and Vimeo.
+
+## Data Structure
+
+The default meatspace message structure is as follows:
+
+    {
+        id: 1,
+        fullName: 'Edna Piranha',
+        postUrl: 'http://url/to/this/meatspace.com/recent.json',
+        content: {
+            created: 1368383147,
+            updated: 1368383147,
+            message: 'some message',
+            urls: [
+                {
+                    title: 'some url',
+                    url: 'http://some.url.com'
+                }
+            ]
+        },
+        meta: {
+            location: '37.3882807, -122.0828559',
+            isPrivate: false,
+            isShared: false
+        },
+        shares: [
+            'http://some.other.url.com/recent.json'
+        ]
+    }
+
+For aux, I decided to not use geolocation data and assigned urls to handle the Youtube and Vimeo links. Instead of using the message property to handle blog content, I used it to hold the author's Gravatar link (Persona email in base64). Now the structure looks like this:
+
+    {
+        id: 1368383147,
+        fullName: 'aux',
+        postUrl: 'http://url/to/this/meatspace.com/recent.json',
+        content: {
+            created: 1368383147,
+            updated: 1368383147,
+            message: 'http://www.gravatar.com/avatar/31392c0cfe437f9f2d72d0448e9875ea',
+            urls: [
+                {
+                    title: 'An optional title for this video link',
+                    url: 'http://www.youtube.com/watch?v=Y20xhvbDZBc'
+                }
+            ]
+        },
+        meta: {
+            location: '',
+            isPrivate: false,
+            isShared: false
+        },
+        shares: []
+    }
+
+In the same structure as the other meatspace sites, there is a [whitelist.json](https://github.com/meatspaces/aux/blob/master/whitelist.json-dist) file that you can add Persona emails of users that are allowed to post content.
+
+## Other Goodies
+
+There are a few additions to Aux that differ from the other sites - I've replaced the frontend with [AngularJS](http://angularjs.org) support and provided an RSS component to allow users to subscribe to the video feeds using [feed](https://npmjs.org/package/feed).
+
+By default, meatspace returns JSON of the most recent in the feed so I passed this over to the RSS generator on the ExpressJS end.
+
+## Why this is Cool
+
+With the decentralized aspect of meatspace, you can see how this can work in interesting ways. By having multiple users set up their own versions of Aux with RSS support and having their own custom whitelist of user access, we've set up Youtube/Vimeo mini-communities that people can subscribe to on various servers.
+
+This also allows for custom interface changes on the CSS rules without interference on existing Aux sites.
+
+Feel like setting up your own and sharing the videos you and your friends listen to? [Fork the Aux project](https://github.com/meatspaces/aux) and start posting!

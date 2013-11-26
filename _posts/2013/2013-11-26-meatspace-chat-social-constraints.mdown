@@ -55,7 +55,7 @@ A single channel can only handle so many chats from users before it becomes nois
 
 ## Focused Public Space and Community Regulation
 
-Since the focused community starts forming real relationships built on various levels of positive, geniuine conversation, they self-regulates the channel. Having a client-side mute button allows participants to easily ignore people who join the conversation and are trolls or providing a negative experience.
+Since the focused community starts forming real relationships built on various levels of positive, geniuine conversation, they self-regulate the channel. Having a client-side mute button allows participants to easily ignore people who join the conversation and are trolls or providing a negative experience.
 
 If a muted individual is not receiving feedback from the community, they are not getting the attention they crave and will find it difficult to continue participation in an environment where nobody wants to talk to them.
 
